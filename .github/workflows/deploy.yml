@@ -3,6 +3,7 @@
 
 name: Deploy
 on:
+  workflow_dispatch:
   push:
     branches: [ "master" ]
 
@@ -27,6 +28,6 @@ jobs:
       - name: Download all dependencies
         run: npm install
       - name: Run test suite
-        run: npm test:ci
+        run: npm run test:ci
       - name: Package web portal
         run: npm run build
