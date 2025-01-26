@@ -1,0 +1,14 @@
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-button-container {
+  & > button:first-of-type {
+    margin-right: 12px;
+  }
+
+  & ~ button {
+    margin-top: 12px;
+  }
+}
